@@ -65,8 +65,16 @@ chmod +x build.sh
 
 ### Windows の場合
 
+**初回ビルド時（仮想環境から作成）:**
+
 ```bash
 build.bat
+```
+
+**2回目以降のビルド（環境が既にある場合）:**
+
+```bash
+rebuild.bat
 ```
 
 ビルドが完了すると、`dist`フォルダに実行ファイルが生成されます。
@@ -151,7 +159,9 @@ pdfXyViewer/
 ├── pdf_viewer.spec        # PyInstaller設定ファイル
 ├── requirements.txt       # 依存パッケージリスト
 ├── build.sh              # Mac/Linux用ビルドスクリプト
-├── build.bat             # Windows用ビルドスクリプト
+├── build.bat             # Windows用初回ビルドスクリプト
+├── rebuild.bat           # Windows用クイックビルドスクリプト
+├── hippo_019_cir.ico     # アプリケーションアイコン
 └── README.md             # このファイル
 ```
 
@@ -193,10 +203,3 @@ pdfXyViewer/
   ]
 }
 ```
-
-🚀 次回の問い合わせ方法
-
-「NEXT_SESSION_INFO.md を読んでください。
-前回（2025-11-14）の続きから作業します。」
-
-このように伝えれば AI がすぐに状況を把握できます。お疲れ様でした！
